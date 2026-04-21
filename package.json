@@ -1,0 +1,12 @@
+{
+  "name": "billys-folio",
+  "description": "Billy Rahmansyah's Portfolio Website",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "cd static-site && npx http-server -p 3000 -g",
+    "dev": "cd static-site && npx http-server -p 3000 -g"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

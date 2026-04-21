@@ -310,29 +310,51 @@ This static version is optimized for Firebase Hosting but can run locally for de
 
 ## ⚙️ Development Setup
 
+### Prerequisites
+- Node.js (untuk `npx serve`)
+- Browser modern
+
+### Local Development
+
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/billyrhmn38515dby/Billiesfolio.git
    cd Billiesfolio
    ```
 
-2. **Install dependencies**:
+2. **Install dependencies** (for http-server):
    ```bash
-   composer install
    npm install
    ```
 
-3. **Configure Environment**:
-   ```bash
-   cp .env.example .env
-   php artisan key:generate
-   ```
+3. **Start Development Server** (Choose one):
 
-4. **Run Local Server**:
+   **Option A - Using npm script (Recommended)**:
    ```bash
-   php artisan serve
+   npm start
+   # or
    npm run dev
    ```
+
+   **Option B - Using http-server directly**:
+   ```bash
+   cd static-site
+   npx http-server -p 3000 -g
+   ```
+
+4. **Access the website**:
+   - **Home**: http://localhost:3000/index.html
+   - **About**: http://localhost:3000/about.html
+   - **Skills**: http://localhost:3000/skills.html
+   - **Projects**: http://localhost:3000/projects.html
+   - **Contact**: http://localhost:3000/contact.html
+
+### ⚠️ Important Notes
+- **Gunakan `http-server`** untuk development (bukan `serve`)
+- `serve` package melakukan 301 redirect pada file `.html` yang menyebabkan routing error
+- `http-server` adalah pilihan yang lebih reliable untuk static sites
+- Flag `-p 3000` untuk port 3000
+- Flag `-g` untuk enable gzip compression
 
 ## 📝 License
 
