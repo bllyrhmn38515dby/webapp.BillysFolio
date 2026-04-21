@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /assets/
+Disallow: /CV_billyrhmnsyh.pdf
+
+Sitemap: https://billysfolio.web.app/sitemap.xml

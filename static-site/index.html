@@ -4,6 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Billy Rahmansyah - IT Professional spesialisasi HealthTech, GovTech, dan sistem strategis. Portofolio proyek Laravel, ReactJS, QA Testing, dan pengembangan aplikasi web enterprise.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://billysfolio.web.app/">
+    <meta property="og:title" content="Billy Rahmansyah - IT Professional">
+    <meta property="og:description" content="Spesialis HealthTech & GovTech | Portofolio Laravel, ReactJS, System Analyst">
+    <meta property="og:image" content="https://billysfolio.web.app/assets/images/billy-avatar.png">
+    <meta property="og:image:alt" content="Billy Rahmansyah - IT Professional">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://billysfolio.web.app/">
+    <meta name="twitter:title" content="Billy Rahmansyah - IT Professional">
+    <meta name="twitter:description" content="Spesialis HealthTech & GovTech | Portofolio Laravel, ReactJS, System Analyst">
+    <meta name="twitter:image" content="https://billysfolio.web.app/assets/images/billy-avatar.png">
     <title>Billy Rahmansyah - IT Professional</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -25,10 +39,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
         }
 
         body {
+            font-family: 'Inter', sans-serif;
             background-color: var(--primary-bg);
             color: var(--text-main);
             overflow-x: hidden;
@@ -47,9 +61,6 @@
         }
 
         .mesh-gradient {
-            position: fixed;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
             overflow: hidden;
@@ -81,8 +92,7 @@
         }
 
         .blob-3 {
-            background: #0ea5e9;
-            /* Neon Cyan */
+            background: #0ea5e9; /* Neon Cyan */
             top: 40%;
             right: 10%;
             width: 40vw;
@@ -91,8 +101,7 @@
         }
 
         .blob-4 {
-            background: #f43f5e;
-            /* Subtle Pink/Red hint */
+            background: #f43f5e; /* Subtle Pink/Red hint */
             bottom: 20%;
             left: 20%;
             width: 35vw;
@@ -101,11 +110,12 @@
         }
 
         .hero-section {
-            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
+            min-height: 100vh;
+            padding: 100px 0;
         }
 
         .hero-content {
@@ -143,6 +153,7 @@
         .hero-section h1 span {
             background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -191,15 +202,16 @@
         .stat-number {
             font-size: 2.5rem;
             font-weight: 900;
-            color: var(--primary-accent);
             margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .stat-label {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
             color: var(--text-muted);
+            font-weight: 500;
         }
 
         /* Buttons */
@@ -216,69 +228,112 @@
             border-radius: 14px;
             font-weight: 800;
             text-decoration: none;
-            transition: 0.3s;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 10px;
+            transition: 0.3s;
+            border: none;
         }
 
         .btn-primary-custom:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(251, 191, 36, 0.3);
-            color: #030712;
         }
 
         .btn-secondary-custom {
-            background: rgba(255, 255, 255, 0.05);
             color: var(--text-main);
             padding: 1rem 2.5rem;
-            border: 1px solid var(--glass-border);
             border-radius: 14px;
             font-weight: 700;
             text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             transition: 0.3s;
+            border: 2px solid var(--glass-border);
+            background: transparent;
         }
 
         .btn-secondary-custom:hover {
             background: rgba(255, 255, 255, 0.1);
             border-color: var(--text-muted);
-            color: var(--text-main);
         }
 
+        /* Navbar */
+        .navbar {
+            background: rgba(3, 7, 18, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(3, 7, 18, 0.95);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar-brand, .nav-link {
+            color: var(--text-main) !important;
+            font-weight: 600;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-accent) !important;
+        }
+
+        /* Footer */
         footer {
             padding: 4rem 0;
             background: rgba(15, 23, 42, 0.4);
             border-top: 1px solid var(--glass-border);
-            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
         }
 
         .social-links a {
-            color: var(--text-muted);
             font-size: 1.5rem;
-            transition: 0.3s;
             margin: 0 10px;
+            color: var(--text-muted);
+            transition: 0.3s;
         }
 
         .social-links a:hover {
             color: var(--primary-accent);
+            transform: translateY(-3px);
         }
 
         @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 80px 20px;
+            }
+
             .hero-section h1 {
                 letter-spacing: -2px;
             }
 
             .stats-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
 
             .cta-container {
                 flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary-custom, .btn-secondary-custom {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
             }
         }
     </style>
 </head>
-
 <body>
     <div class="ambient-bg"></div>
     <div class="mesh-gradient">
@@ -287,7 +342,6 @@
         <div class="mesh-blob blob-3" id="blob3"></div>
         <div class="mesh-blob blob-4" id="blob4"></div>
     </div>
-
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-expand-lg">
         <div class="container">
@@ -306,25 +360,21 @@
             </div>
         </div>
     </nav>
-
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="container">
             <div class="hero-content">
                 <span class="hero-tagline reveal">IT Professional & System Analyst</span>
                 <h1 class="reveal">BUILDING <span>DIGITAL</span> INNOVATIONS.</h1>
                 <p class="hero-desc reveal">Membantu organisasi mengakselerasi transformasi melalui analisis data
                     strategis dan pengembangan sistem yang presisi.</p>
-
                 <div class="cta-container reveal">
                     <a href="projects.html" class="btn-primary-custom">
                         Lihat Portofolio <i class="fas fa-arrow-right"></i>
                     </a>
                     <a href="contact.html" class="btn-secondary-custom">
-                        Hubungi Saya
+                        Hubungi Saya <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
-
                 <div class="stats-grid reveal" style="transition-delay: 0.3s;">
                     <div class="stat-item">
                         <div class="stat-number">5+</div>
@@ -340,21 +390,22 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+        <!-- Features Section -->
+        <section class="py-5">
+            <div class="container text-center">
+                <h2 class="reveal mb-5">Teknologi &amp; Stack</h2>
+                <p class="reveal mb-5">Spesialisasi dalam HealthTech, GovTech, dan Enterprise Web Apps</p>
+            </div>
+        </section>
     <!-- Footer -->
     <footer>
-        <div class="container">
             <p class="mb-4">&copy; 2026 Billy Rahmansyah. Semua hak dilindungi.</p>
             <div class="social-links">
                 <a href="https://github.com/billyrhmn38515dby" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:billyrhmnsyh@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -367,13 +418,11 @@
                     nav.classList.remove('scrolled');
                 }
             });
-
             // Intersection Observer for reveal animations
             const revealOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             };
-
             const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -382,7 +431,6 @@
                     }
                 });
             }, revealOptions);
-
             document.querySelectorAll('.reveal').forEach(el => {
                 revealObserver.observe(el);
             });
@@ -394,11 +442,7 @@
                 document.getElementById('blob3'),
                 document.getElementById('blob4')
             ];
-
-            let mouseX = 0;
-            let mouseY = 0;
-            let currentX = 0;
-            let currentY = 0;
+            let mouseX = 0, mouseY = 0, currentX = 0, currentY = 0;
 
             window.addEventListener('mousemove', (e) => {
                 mouseX = (e.clientX / window.innerWidth - 0.5) * 200;
@@ -406,35 +450,25 @@
             });
 
             function animate() {
-                // Smooth easing
                 currentX += (mouseX - currentX) * 0.05;
                 currentY += (mouseY - currentY) * 0.05;
-
                 const time = Date.now() * 0.001;
-
                 blobs.forEach((blob, index) => {
                     if (!blob) return;
-
-                    // Create unique movement for each blob
                     const shiftX = Math.sin(time * 0.5 + index) * 50;
                     const shiftY = Math.cos(time * 0.3 + index) * 50;
-
-                    // Interaction multiplier (some follow more than others)
                     const multiplier = (index + 1) * 0.5;
-
                     const finalX = shiftX + (currentX * multiplier);
                     const finalY = shiftY + (currentY * multiplier);
                     const scale = 1 + Math.sin(time * 0.2 + index) * 0.1;
-
                     blob.style.transform = `translate(${finalX}px, ${finalY}px) scale(${scale})`;
                 });
-
                 requestAnimationFrame(animate);
             }
-
             animate();
         });
     </script>
 </body>
-
 </html>
+
+
