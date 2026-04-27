@@ -112,12 +112,11 @@
 
         /* Hero Section */
         .hero-section {
-            min-height: 50vh;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            padding-top: 100px;
+            padding: 160px 0 60px;
             overflow: hidden;
         }
 
@@ -130,7 +129,7 @@
             font-size: clamp(3rem, 10vw, 6rem);
             font-weight: 950;
             margin-bottom: 1rem;
-            letter-spacing: -3px;
+            letter-spacing: -1px;
             background: linear-gradient(to bottom, #fff, #999);
             -webkit-background-clip: text;
             background-clip: text;
@@ -336,7 +335,7 @@
     <div class="ambient-bg"></div>
 
     <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-expand-lg">
+    <nav id="mainNav" class="navbar navbar-expand-lg" data-bs-theme="dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">Billy's Folio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -344,11 +343,17 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav gap-lg-4">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about.html">Tentang</a></li>
-                    <li class="nav-item"><a class="nav-link" href="skills.html">Keterampilan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Proyek</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav-home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html" data-i18n="nav-about">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html" data-i18n="nav-skills">Keterampilan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html" data-i18n="nav-projects">Proyek</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav-contact">Kontak</a></li>
+                    <li class="nav-item d-flex align-items-center ms-lg-3">
+                        <select id="lang-switcher" class="form-select form-select-sm bg-transparent text-white border-secondary" style="width: auto; cursor: pointer;">
+                            <option value="id" class="bg-dark">ID</option>
+                            <option value="en" class="bg-dark">EN</option>
+                        </select>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -357,13 +362,13 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container hero-content">
-            <h1 class="reveal">TENTANG <span>SAYA</span></h1>
-            <p class="reveal">Arsitek Solusi & Pengembang Berorientasi Bisnis</p>
+            <h1 class="reveal" data-i18n="about-title">TENTANG <span>SAYA</span></h1>
+            <p class="reveal" data-i18n="about-subtitle">Arsitek Solusi & Pengembang Berorientasi Bisnis</p>
         </div>
     </section>
 
     <!-- Bio Section -->
-    <section class="py-5 mt-5">
+    <section class="py-5">
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-5 reveal">
@@ -373,16 +378,16 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="profile-card reveal">
-                        <h2 class="section-title mb-4">Billy <span>Rahmansyah</span></h2>
-                        <p class="bio-text mb-4">
+                        <h2 class="section-title mb-4" data-i18n="about-name">Billy <span>Rahmansyah</span></h2>
+                        <p class="bio-text mb-4" data-i18n="about-bio-1">
                             Lulusan Teknik Informatika dengan dedikasi tinggi, membawa lebih dari <strong>4 tahun pengalaman</strong> dalam menjembatani kesenjangan antara kebutuhan bisnis yang kompleks dan solusi teknis yang efisien.
                         </p>
-                        <p class="bio-text mb-4">
+                        <p class="bio-text mb-4" data-i18n="about-bio-2">
                             Spesialisasi saya terletak pada analisis kebutuhan sistem, desain arsitektur aplikasi, dan manajemen siklus hidup pengembangan perangkat lunak (SDLC), terutama pada sektor pemerintahan dan teknologi kesehatan.
                         </p>
                         
                         <div class="mt-5">
-                            <h5 class="text-white mb-3 fw-bold">Keahlian Strategis</h5>
+                            <h5 class="text-white mb-3 fw-bold" data-i18n="about-skills-title">Keahlian Strategis</h5>
                             <div class="d-flex flex-wrap">
                                 <span class="badge-custom">Requirement Gathering</span>
                                 <span class="badge-custom">Manual Testing & QA</span>
@@ -401,7 +406,7 @@
     <!-- Professional Journey -->
     <section class="py-5 mt-5">
         <div class="container">
-            <h2 class="section-title reveal">Jejak <span>Profesional</span></h2>
+            <h2 class="section-title reveal" data-i18n="about-journey-title">Jejak <span>Profesional</span></h2>
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <div class="timeline">
@@ -409,24 +414,24 @@
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <div class="timeline-date">2024 - SEKARANG</div>
-                                <h4 class="text-white">IT Business Analyst & Implementation Support</h4>
-                                <p class="text-white-50">PT. Harsa Digital Teknologi - Fokus pada koordinasi teknis, analisis kebutuhan sistem, dan manajemen implementasi proyek strategis.</p>
+                                <h4 class="text-white" data-i18n="about-journey-1-title">IT Business Analyst & Implementation Support</h4>
+                                <p class="text-white-50" data-i18n="about-journey-1-desc">PT. Harsa Digital Teknologi - Fokus pada koordinasi teknis, analisis kebutuhan sistem, dan manajemen implementasi proyek strategis.</p>
                             </div>
                         </div>
                         <div class="timeline-item reveal">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <div class="timeline-date">2020 - 2024</div>
-                                <h4 class="text-white">IT Implementor / QA / Application Support</h4>
-                                <p class="text-white-50">PT. Syailendra Cipta Utama - Menangani pengujian aplikasi, dokumentasi teknis, dan dukungan operasional sistem untuk klien sektor publik.</p>
+                                <h4 class="text-white" data-i18n="about-journey-2-title">IT Implementor / QA / Application Support</h4>
+                                <p class="text-white-50" data-i18n="about-journey-2-desc">PT. Syailendra Cipta Utama - Menangani pengujian aplikasi, dokumentasi teknis, dan dukungan operasional sistem untuk klien sektor publik.</p>
                             </div>
                         </div>
                         <div class="timeline-item reveal">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <div class="timeline-date">2021 - 2025 (EST)</div>
-                                <h4 class="text-white">S1 Teknik Informatika</h4>
-                                <p class="text-white-50">Universitas Binaniaga Indonesia - Mendalami arsitektur perangkat lunak, algoritma, dan manajemen basis data.</p>
+                                <h4 class="text-white" data-i18n="about-journey-3-title">S1 Teknik Informatika</h4>
+                                <p class="text-white-50" data-i18n="about-journey-3-desc">Universitas Binaniaga Indonesia - Mendalami arsitektur perangkat lunak, algoritma, dan manajemen basis data.</p>
                             </div>
                         </div>
                     </div>
@@ -438,30 +443,30 @@
     <!-- Achievements -->
     <section class="py-5 mt-5">
         <div class="container">
-            <h2 class="section-title text-center d-block reveal">Pencapaian <span>Utama</span></h2>
+            <h2 class="section-title text-center d-block reveal" data-i18n="about-achievements-title">Pencapaian <span>Utama</span></h2>
             <div class="row g-4 mt-4">
                 <div class="col-6 col-md-3">
                     <div class="stat-card reveal">
                         <div class="stat-number">12+</div>
-                        <p class="text-white-50 m-0">Proyek Selesai</p>
+                        <p class="text-white-50 m-0" data-i18n="about-stat-projects">Proyek Selesai</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="stat-card reveal" style="transition-delay: 0.1s;">
                         <div class="stat-number">5+</div>
-                        <p class="text-white-50 m-0">Tahun Pengalaman</p>
+                        <p class="text-white-50 m-0" data-i18n="about-stat-exp">Tahun Pengalaman</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="stat-card reveal" style="transition-delay: 0.2s;">
                         <div class="stat-number">5</div>
-                        <p class="text-white-50 m-0">Sertifikasi IT</p>
+                        <p class="text-white-50 m-0" data-i18n="about-stat-certs">Sertifikasi IT</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="stat-card reveal" style="transition-delay: 0.3s;">
                         <div class="stat-number">3</div>
-                        <p class="text-white-50 m-0">Klien Strategis</p>
+                        <p class="text-white-50 m-0" data-i18n="about-stat-clients">Klien Strategis</p>
                     </div>
                 </div>
             </div>
@@ -471,55 +476,55 @@
     <!-- Clients & Partners -->
     <section class="py-5 mt-5">
         <div class="container">
-            <h2 class="section-title reveal">Klien & <span>Mitra</span></h2>
+            <h2 class="section-title reveal" data-i18n="about-clients-title">Klien & <span>Mitra</span></h2>
             <div class="row g-4 mt-2">
                 <div class="col-md-4 col-lg-3">
                     <div class="client-card reveal">
                         <i class="fas fa-landmark client-icon"></i>
                         <h5 class="text-white">Inspektorat Kota Bogor</h5>
-                        <p class="text-white-50 small">Pemerintahan</p>
+                        <p class="text-white-50 small" data-i18n="about-client-gov">Pemerintahan</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-3">
                     <div class="client-card reveal">
                         <i class="fas fa-heartbeat client-icon"></i>
                         <h5 class="text-white">DINKES Kota Bogor</h5>
-                        <p class="text-white-50 small">Layanan Kesehatan</p>
+                        <p class="text-white-50 small" data-i18n="about-client-health">Layanan Kesehatan</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-3">
                     <div class="client-card reveal">
                         <i class="fas fa-shield-alt client-icon"></i>
                         <h5 class="text-white">SATPOLPP Kota Bogor</h5>
-                        <p class="text-white-50 small">Keamanan Publik</p>
+                        <p class="text-white-50 small" data-i18n="about-client-security">Keamanan Publik</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-3">
                     <div class="client-card reveal">
                         <i class="fas fa-home client-icon"></i>
                         <h5 class="text-white">DISPERUMKIM</h5>
-                        <p class="text-white-50 small">Permukiman</p>
+                        <p class="text-white-50 small" data-i18n="about-client-housing">Permukiman</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-3">
                     <div class="client-card reveal">
                         <i class="fas fa-gavel client-icon"></i>
                         <h5 class="text-white">LawFirm ERALF</h5>
-                        <p class="text-white-50 small">Sektor Hukum</p>
+                        <p class="text-white-50 small" data-i18n="about-client-legal">Sektor Hukum</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-3">
                     <div class="client-card reveal">
                         <i class="fas fa-file-invoice-dollar client-icon"></i>
                         <h5 class="text-white">Bappenda</h5>
-                        <p class="text-white-50 small">Pajak Daerah</p>
+                        <p class="text-white-50 small" data-i18n="about-client-tax">Pajak Daerah</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-3">
                     <div class="client-card reveal">
                         <i class="fas fa-camera client-icon"></i>
                         <h5 class="text-white">DISPARBUD</h5>
-                        <p class="text-white-50 small">Pariwisata</p>
+                        <p class="text-white-50 small" data-i18n="about-client-tourism">Pariwisata</p>
                     </div>
                 </div>
             </div>
@@ -555,7 +560,7 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p style="margin-bottom: 1rem;">&copy; 2024 Billy Rahmansyah. Semua hak dilindungi.</p>
+            <p style="margin-bottom: 1rem;" data-i18n="footer-copy">&copy; 2024 Billy Rahmansyah. Semua hak dilindungi.</p>
             <div style="display: flex; justify-content: center; gap: 1rem;">
                 <a href="https://github.com/billyrhmn38515dby" target="_blank" style="color: #FFD700; font-size: 1.5rem;"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com" target="_blank" style="color: #FFD700; font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
@@ -563,7 +568,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="assets/js/i18n.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
